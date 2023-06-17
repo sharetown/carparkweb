@@ -55,7 +55,7 @@
 
 			</view>
 		</u-card>
-		<!-- 我的车辆 -->
+		<!-- 我的车辆列表 -->
 		<u-card :show-head="false">
 			<view class="myCar" slot="body">
 				<view class="myCar-title">
