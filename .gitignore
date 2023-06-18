@@ -1,1 +1,4 @@
+#忽略node_modules文件夹下的所有内容
 node_modules/
+#忽略manifest.json配置文件
+/manifest.json
