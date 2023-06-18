@@ -10,11 +10,11 @@
 				"navigationBarTitleText": "uni-app"
 			}
 		}
-	    ,{
-            "path" : "pages/carInput/carInput",
+        ,{
+            "path" : "pages/demo/demo",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "车牌号输入框",
+                "navigationBarTitleText": "demo",
                 "enablePullDownRefresh": false
             }
             

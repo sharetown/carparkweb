@@ -34,6 +34,13 @@
 
 <script>
 	export default {
+		name:'car-input',
+		props:{
+			submitName:{
+				type:String,
+				default:'查缴停车费'
+			}
+		},
 		data() {
 			return {
 				showCarKeyboard: false, // 是否显示车牌号键盘
@@ -47,7 +54,7 @@
 				//区分燃油车格式和新能源车格式
 				indexMax: 6,
 				//按钮文本
-				submitName: "查缴停车费"
+				// submitName: "查缴停车费"
 
 			};
 		},
