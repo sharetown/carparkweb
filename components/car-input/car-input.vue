@@ -23,7 +23,7 @@
 					:border-color="index==7?'#DB005B':''"></u-input>
 			</u-form-item>
 			<!-- 提交按钮 -->
-			<u-button @click="submit">{{submitName}}</u-button>
+			<u-button class="submit" @click="submit">{{submitName}}</u-button>
 			<!-- 车牌号键盘 -->
 			<u-keyboard ref="uKeyboard" :show-tips="false" :cancel-btn="false" :mask="false" confirm-text="关闭"
 				mode="car" v-model="showCarKeyboard" @change="valChange" @backspace="backspace"></u-keyboard>
@@ -34,11 +34,11 @@
 
 <script>
 	export default {
-		name:'car-input',
-		props:{
-			submitName:{
-				type:String,
-				default:'查缴停车费'
+		name: 'car-input',
+		props: {
+			submitName: {
+				type: String,
+				default: '查缴停车费'
 			}
 		},
 		data() {
@@ -128,6 +128,11 @@
 				height: 98rpx;
 				font-size: 38rpx;
 			}
+		}
+
+		.submit {
+			background-color: #F94892;
+			color: white;
 		}
 	}
 </style>

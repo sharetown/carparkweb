@@ -62,7 +62,7 @@
 					<label>我的车辆</label>
 					<u-icon name="arrow-right"></u-icon>
 				</view>
-				<u-button type="info" :custom-style="customStyleButton">添加爱车</u-button>
+				<u-button type="info" :custom-style="customStyleButton" @click="addMyCar">添加爱车</u-button>
 			</view>
 		</u-card>
 		<!-- 车辆服务 -->
@@ -112,6 +112,12 @@
 			</view>
 		</u-card>
 
+		<!-- 弹出层 -->
+		<u-popup v-model="popupShow" mode="bottom" border-radius="20" height=60% closeable>
+			<view class="addcar">
+				<car-input class="add-input" submitName="确认添加"></car-input>
+			</view>
+		</u-popup>
 	</view>
 </template>
 
@@ -131,7 +137,8 @@
 					margin: '50rpx 0rpx 0rpx 0rpx'
 
 				},
-				src: "../../static/logo.png"
+				src: "../../static/logo.png",
+				popupShow: false
 			}
 		},
 		onLoad() {
@@ -171,6 +178,9 @@
 				if (key == 7) {
 					this.indexaMax = 7
 				}
+			},
+			addMyCar() {
+				this.popupShow = true
 			}
 		}
 	}
@@ -220,6 +230,18 @@
 				justify-content: space-between;
 				font-size: 32rpx;
 			}
+		}
+
+		.addcar {
+			::v-deep .add-input {
+				padding: 80rpx 0 0 0;
+
+				.submit {
+					width: 50%;
+				}
+
+			}
+
 		}
 	}
 </style>
