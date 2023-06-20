@@ -1,6 +1,5 @@
 <template>
-	<view>
-		<car-input submitName="ok"></car-input>
+
 	</view>
 </template>
 
